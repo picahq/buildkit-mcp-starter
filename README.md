@@ -35,7 +35,7 @@ npm start
 
 The server will start an HTTP server and listen for MCP requests. You should see:
 ```
-MCP Server running on http://localhost:3333/mcp
+MCP Server running on http://localhost:3000/mcp
 Use MCP Inspector to connect and test your server
 ```
 
@@ -63,7 +63,7 @@ This will:
 
 2. **In the Inspector interface**:
    - Select **"Streamable HTTP"** as the transport type
-   - Enter the server URL: `http://localhost:3333/mcp`
+   - Enter the server URL: `http://localhost:3000/mcp`
    - Click **"Connect"**
 
 ### Test Your Server
@@ -87,11 +87,11 @@ First, make sure the server is running:
 npm start
 ```
 
-You should see: `MCP Server running on http://localhost:3333/mcp`
+You should see: `MCP Server running on http://localhost:3000/mcp`
 
 #### List Available Tools
 ```bash
-curl -X POST http://localhost:3333/mcp \
+curl -X POST http://localhost:3000/mcp \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}'
@@ -99,7 +99,7 @@ curl -X POST http://localhost:3333/mcp \
 
 #### Call the echo Tool
 ```bash
-curl -X POST http://localhost:3333/mcp \
+curl -X POST http://localhost:3000/mcp \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"echo","arguments":{"message":"Hello World!"}}}'
